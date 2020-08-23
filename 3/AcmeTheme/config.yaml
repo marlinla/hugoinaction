@@ -1,0 +1,9 @@
+module:
+  hugoVersion:
+    min: 0.71.1
+  imports:
+    - path: github.com/hugoinaction/Resources
+      mounts:
+        - source: css
+          target: assets
+    - path: github.com/hugoinaction/hugo-debug-utils
