@@ -84,7 +84,9 @@
   font-size: 12px;
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea,
+.contact button {
   border: 1px solid #eee;
   border-radius: 0;
   min-height: 35px;
@@ -106,7 +108,7 @@
   outline: 1px solid  {{$.Param "color"}};
 }
 
-.contact input[type="submit"]:hover {
+.contact button:hover {
   color: #fff;
   background: {{$.Param "color"}};
   cursor: pointer;
