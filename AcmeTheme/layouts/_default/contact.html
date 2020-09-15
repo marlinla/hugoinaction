@@ -15,7 +15,7 @@
   <main>
     <h1>{{.Title}}</h1>
     {{.Content}}
-    <form>
+    <form netlify="true" name="Contact" data-netlify-recaptcha="true">
       <div>
         <label for="name">Name:</label>
         <input name="name" type="text" required>
