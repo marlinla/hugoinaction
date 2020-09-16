@@ -1,0 +1,26 @@
+{{/* layouts/survey/single.html */}}
+{{ define "body" }}
+<section>
+  <main>
+    <h1>{{.Title}}</h1>
+{{.Content}}
+<form name="{{.Title}}" netlify="true">
+{{ range $index, $item := .Params.survey }}
+  <div>
+  <label for="question{{$index}}">{{$item.question}}</label>
+  {{if $item.answer}}
+    <select id="question{{$index}}" name="question{{$index}}" required>
+      {{range $item.answer}}
+        <option value="{{.}}" name="{{.}}">{{.}}</option>
+      {{end}}
+    </select>
+  {{else}}
+    <input id="question{{$index}}" name="question{{$index}}" type="text" required>
+  {{end}}
+  </div>
+{{ end }}
+<button type="submit">Submit</button>
+</form>
+</main>
+</section>
+{{ end }}
