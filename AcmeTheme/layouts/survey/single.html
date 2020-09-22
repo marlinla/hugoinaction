@@ -1,12 +1,15 @@
 {{/* layouts/survey/single.html */}}
+{{define "bodyClass"}}survey{{end}}
+
 {{ define "body" }}
 <section>
   <main>
-    <h1>{{.Title}}</h1>
+    <h2>{{.Title}}</h2>
 {{.Content}}
 <form name="{{.Title}}" netlify="true">
+  <ol>
 {{ range $index, $item := .Params.survey }}
-  <div>
+  <li>
   <label for="question{{$index}}">{{$item.question}}</label>
   {{if $item.answer}}
     <select id="question{{$index}}" name="question{{$index}}" required>
@@ -17,8 +20,9 @@
   {{else}}
     <input id="question{{$index}}" name="question{{$index}}" type="text" required>
   {{end}}
-  </div>
+  </li>
 {{ end }}
+</ol>
 <button type="submit">Submit</button>
 </form>
 </main>
