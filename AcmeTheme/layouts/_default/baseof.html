@@ -29,6 +29,7 @@
         {{.TableOfContents}}
         {{end}}
         {{.Content}}
+        {{ partial "comment.html" (dict "Action" ($.Param "CommentAction") "Permalink" .Page.Permalink "Disabled" ($.Param "CommentDisabled")) }}
       </main>
     </section>
   {{end}}

@@ -92,8 +92,8 @@ button {
   border-radius: 0;
   min-height: 35px;
   margin-bottom: 30px;
-  padding: 0px 10px;
-  width: calc(100% - 20px);
+  width: 100%;
+  padding: 0;
   font-weight: lighter;
   text-shadow: 2px 2px 2px #ddd;
   font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
@@ -110,6 +110,21 @@ select {
     0 0;
   background-size: .65em auto,
     100%;
+}
+
+.contact button {
+  padding: 0px 10px;
+}
+
+input,
+select {
+  padding: 0px 10px;
+  width: calc(100% - 20px);
+}
+
+textarea {
+  padding: 10px;
+  width: calc(100% - 20px);
 }
 
 .contact textarea {
@@ -139,8 +154,11 @@ button:hover {
 
 .survey label~* {
   float: right;
-  float: right;
   width: 200px;
   margin-left: 10px;
   margin-bottom: 0;
+}
+
+.survey label~input {
+  width: 180px;
 }
