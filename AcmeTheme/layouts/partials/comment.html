@@ -10,7 +10,7 @@
 {{ else }}
   <form action="{{.Action}}" method="post">
 {{ end }}
-  <input type="hidden" name="url" value="{{.Permalink}}">
+  <input type="hidden" name="url" value="{{.RelPermalink}}">
   <div>
     <label for="name">Name:</label>
     <input name="name" type="text" required>

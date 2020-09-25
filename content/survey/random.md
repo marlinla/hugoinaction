@@ -1,6 +1,6 @@
 ---
 title: Random questions from Hugo In Action
-form: https://formspree.io/mleoenno
+form: mleoenno
 survey:
 - question: Do you like websites that are slow to load?
   answer:

@@ -1,7 +1,7 @@
 ---
 layout: contact
 title: Contact Us
-contact: https://formspree.io/mjvpbrvy
+contact: mjvpbrvy
 ---
 
 We're listening.
