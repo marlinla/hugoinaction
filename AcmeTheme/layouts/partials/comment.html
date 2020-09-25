@@ -8,7 +8,7 @@
 {{if getenv "NETLIFY" }}
   <form netlify="true" name="Comments">
 {{ else }}
-  <form action="{{.Action}}" method="post">
+  <form action="https://formspree.io/{{.Action}}" method="post">
 {{ end }}
   <input type="hidden" name="url" value="{{.RelPermalink}}">
   <div>

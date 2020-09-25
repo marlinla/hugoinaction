@@ -1,0 +1,16 @@
+
+{{$response := newScratch}}
+{{if site.Params.CommentForm }}
+
+  {{$comments:= getJSON "https://api.netlify.com/api/v1/forms/" site.Params.CommentForm "/submissions?access_token=" (getenv "COMMENTS_TOKEN")}}
+
+  {{ range $comments }}
+    {{if not ($response.Get .data.url)}}
+      {{$response.Set .data.url (slice )}}
+    {{end}}
+
+    {{$response.Add .data.url .data}}
+  {{ end }}
+{{ end }}
+
+{{return $response}}
