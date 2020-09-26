@@ -162,3 +162,37 @@ button:hover {
 .survey label~input {
   width: 180px;
 }
+
+.comment {
+  display: grid;
+  grid-template-columns: 70px auto;
+  margin: 0 0 40px 0;
+}
+
+.comment::after {
+  content: " ";
+  display: block;
+  width: 40px;
+  margin-top: 20px;
+  margin-left: calc(50% - 55px);
+  border-top: 3px solid {{.Param "color"}};
+  grid-column: 2;
+}
+
+.comment svg {
+  color: white;
+  background: #ddd;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 30px 20px 0;
+  grid-row: span 3;
+}
+
+.comment .author {
+  font-weight: normal;
+}
+
+.comment .message {
+  grid-column: 2;
+}

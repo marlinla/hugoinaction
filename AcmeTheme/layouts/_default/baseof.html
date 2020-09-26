@@ -29,7 +29,7 @@
         {{.TableOfContents}}
         {{end}}
         {{.Content}}
-        {{ partial "comment.html" (dict "Action" ($.Param "CommentAction") "RelPermalink" .Page.RelPermalink "Disabled" ($.Param "CommentDisabled")) }}
+        {{ partial "comment.html" (dict "FormspreeCommentForm" ($.Param "FormspreeCommentForm") "RelPermalink" .Page.RelPermalink "Disabled" ($.Param "CommentDisabled")) }}
       </main>
     </section>
   {{end}}
